@@ -220,7 +220,7 @@ def _create_or_edit(entry, template):
 @app.route('/create/', methods=['GET', 'POST'])
 @login_required
 def create():
-    return _create_or_edit(Entry(title='', content=''), 'create.html')
+    return _create_or_edit(Entry(author='', title='', content=''), 'create.html')
 
 @app.route('/drafts/')
 @login_required
